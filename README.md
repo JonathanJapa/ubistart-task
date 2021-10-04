@@ -1,3 +1,16 @@
+# Challenge ubistart
+
+## Descrição
+
+O projeto foi desenvolvido utilizando o framework NestJS. Tomei essa decisão pela agilidade + custo-benefício.
+
+#### Estrutura de um módulo
+  - services
+  - repository
+  - controller
+  - /dto/
+  - entities
+
 ## Acesso a documentação da API(Swagger)
 - ``` http://localhost:3000/api ```
 
@@ -27,15 +40,22 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Testar localmente
 
-```bash
-# unit tests
-$ npm run test
+## Ficou faltando algumas coisas..
+Ficaram faltando algumas coisas devido a falta de tempo,
+-Faltou filters
+-alguns tratamentos de erros mais específicos
+-Desenvolvimento de testes unitários e E2E
+_Faltou alguns filters 
+-Não fiz o expires_at da task
+-Começei a deleção lógica, mas faltou dar o Exclude() do class-tranformer, para nao aparecer para o usuario. 
+-Faltou configurar algumas variaveis ambiente,
+-Faltou configurar o admin roles. 
+-Faltou implementaçao de logging;
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
+# O feito é melhor que o perfeito né :)
+Com o tempo que tive tentei implementar uma arquitetura aplicando o SOLID,
+e tentei mostrar mais a forma como eu trabalho do que o terminar a aplicação em sí. 
+
+Espero que o resultado tenha agradado; 
