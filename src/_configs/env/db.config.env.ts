@@ -1,11 +1,13 @@
-import { Exam } from '../../exams/entities/exam.entity';
-import { Laboratory } from '../../laboratories/entities/laboratory.entity';
+import { User } from "src/auth/user.entity";
+import { Task } from "../../tasks/tasks.entity";
+
+const entities = [Task, User]
 
 export const db_config_env = {
   test: {
     type: 'sqlite',
     database: 'wa_db',
-    entities: [Laboratory, Exam],
+    entities,
     synchronize: true,
     cli: {
       migrationsDir: 'src/migration',
@@ -19,21 +21,12 @@ export const db_config_env = {
     username: process.env.DATABASE_USERNAME || 'wa_db',
     password: process.env.DATABASE_PASSWORD || 'root',
     database: process.env.DATABASE_NAME || 'root',
-    entities: [Laboratory, Exam],
+    entities,
     synchronize: true,
     cli: {
       migrationsDir: 'src/migration',
     },
     migrations: ['src/migration/*{.ts,.js}'],
   },
-  production: {
-    type: 'sqlite',
-    database: 'wa_db',
-    entities: [Laboratory, Exam],
-    synchronize: true,
-    cli: {
-      migrationsDir: 'src/migration',
-    },
-    migrations: ['src/migration/*{.ts,.js}'],
-  },
+  
 };
